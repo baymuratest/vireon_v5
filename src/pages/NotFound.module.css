@@ -1,0 +1,15 @@
+.page {
+  padding-top: 64px; min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+}
+.inner { text-align: center; padding: 40px 24px; }
+.code {
+  font-family: var(--font-display);
+  font-size: clamp(80px, 15vw, 160px);
+  font-weight: 900; letter-spacing: -.02em;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text; line-height: 1;
+}
+.title { font-size: 24px; font-weight: 700; margin: 16px 0 10px; }
+.sub { color: var(--text2); font-size: 15px; }

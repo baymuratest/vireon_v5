@@ -1,0 +1,87 @@
+.wrap {
+  padding-top: 80px; padding-bottom: 120px;
+  max-width: 720px;
+  display: flex; flex-direction: column; gap: 40px;
+  animation: fadeUp .6s var(--ease) both;
+}
+
+.hero {
+  text-align: center;
+  display: flex; flex-direction: column; align-items: center;
+  gap: 18px;
+  padding: 16px 0;
+}
+.heart {
+  position: relative;
+  width: 80px; height: 80px; border-radius: 50%;
+  background: var(--accent); color: var(--on-accent);
+  display: grid; place-items: center; font-size: 36px;
+  box-shadow: 0 20px 60px -15px rgba(255,255,255,.3);
+  animation: heartBeat 2.4s ease-in-out infinite;
+}
+@keyframes heartBeat {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.06); }
+}
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5vw, 48px);
+  font-weight: 700;
+  letter-spacing: -.035em;
+  line-height: 1.05;
+}
+.hero p {
+  color: var(--text2); line-height: 1.7;
+  max-width: 540px; font-size: 15.5px;
+}
+
+.list { display: flex; flex-direction: column; gap: 16px; }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 28px;
+  display: flex; flex-direction: column; gap: 18px;
+  transition: border-color .3s var(--ease);
+}
+.card:hover { border-color: var(--border2); }
+.head { display: flex; align-items: center; gap: 16px; }
+.icon {
+  width: 52px; height: 52px; border-radius: 50%;
+  display: grid; place-items: center;
+  color: #fff; font-weight: 700; font-size: 24px;
+  box-shadow: 0 8px 24px -8px rgba(0,0,0,.4);
+}
+.headText h3 {
+  font-family: var(--font-display);
+  font-size: 19px; font-weight: 600;
+  letter-spacing: -.02em;
+}
+.headText span { color: var(--text3); font-size: 12.5px; margin-top: 2px; display: block; }
+
+.addressBox {
+  display: flex; align-items: center; gap: 10px;
+  background: var(--bg3); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 14px 16px;
+  flex-wrap: wrap;
+}
+.addressBox code {
+  flex: 1; min-width: 0;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 13.5px; color: var(--text);
+  word-break: break-all;
+  letter-spacing: .02em;
+}
+.copyBtn {
+  padding: 9px 16px; border-radius: 10px; cursor: pointer;
+  background: var(--accent); color: var(--on-accent);
+  border: none; font-weight: 600; font-size: 12.5px;
+  transition: transform .2s var(--ease), opacity .2s var(--ease);
+}
+.copyBtn:hover { transform: translateY(-1px); opacity: .92; }
+
+.warn { color: var(--text3); font-size: 12.5px; line-height: 1.6; }
+.warn b { color: var(--text2); font-weight: 600; }
+
+.note { text-align: center; color: var(--text3); font-size: 13.5px; }
